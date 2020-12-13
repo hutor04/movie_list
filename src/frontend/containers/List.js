@@ -23,7 +23,9 @@ const List = () => {
   }
 
   return (
-    data.map(movie => <Card key={movie.id} movie={movie} />)
+    <div className={'row'}>
+      {data.map(movie => <div className={'col-sm-2'} key={movie.id}><Card key={movie.id} movie={movie} /></div>)}
+    </div>
   );
 };
 
